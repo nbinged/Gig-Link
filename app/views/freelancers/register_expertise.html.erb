@@ -1,0 +1,48 @@
+<div class ="container">
+
+	<div class="row">
+
+		<div class="col-4">
+		 <br />
+			<ul style="list-style-type:none;">
+				<li>Basic Profile &#10004;</li>
+				<li style="color: #1F8496"><strong>Expertise &#10063</strong></li>
+				<li>Budget &#10063</li>
+			</ul>
+		</div>
+
+
+		<div class="col-8">
+	  <br />
+		<h2>Relevant Expertise</h2>
+    	<p>Step 2 of 3</p>
+
+						<%= form_with scope: :freelancer, url: create_expertise_path, local: true do |form| %>
+						  <p>
+						    <%= form.label :'What is your main service offering to client?' %><br>
+						    <%= form.collection_select :job_category_id, @job_categories, :id, :name %>
+						  </p>
+
+
+						  <p>
+						    <%= form.label :'What is your experience level?' %><br>
+						    <%= form.collection_radio_buttons :experience_level_hourly_rate_id, @experience_levels, :id, :name %>
+						  </p>
+
+						  <p>
+						    <%= form.label :'Prefered payment type?' %><br>
+						    <%= form.collection_radio_buttons :payment_type_id, @payment_types, :id, :name %>
+						  </p>
+
+						  <p>
+						 
+						  <%= form.submit "Next", class: "btn btn-success", style: "height:40px; width: 120px; font-size:18px; margin-right: 10px"%>
+                          <%= link_to 'Back', register_profile_path %>
+            		 
+						  </p>
+
+		</div>
+	</div>
+</div>
+
+<% end %>

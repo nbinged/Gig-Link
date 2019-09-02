@@ -1,0 +1,44 @@
+<div class="container">
+    </br>
+<div class="row">
+        <div class="col-2"></div>
+    <div class="col-8">
+
+    <% @job_posting.each do |job_post| %>
+
+    <div class="card">
+  <h5 class="card-header"> Required role: <%= job_post.job_category.name %> </h5>
+
+  <div class="card-body">
+    <h3 class="card-title"> <strong> <%= job_post.job_post_title %> </strong> </h3>
+
+        <p class="card-text"> <%= job_post.job_description %> </p>
+
+        <p class="card-text"> <strong>Project Timeline:</strong> <%= job_post.project_timeline.name %> </p>
+        <p class="card-text"> <strong> Project Type:</strong> <%= job_post.project_type.name %> </p>
+        <p class="card-text"> <strong>Preferred Experience level:</strong> <%= job_post.experience_level_hourly_rate.name %> </p>
+        <p class="card-text"> <strong>Hourly Rate:</strong> <%= job_post.experience_level_hourly_rate.hourly_rates %> </p>
+
+        <% if (freelancer_signed_in?) %>
+                <% @job_match = JobMatch.find_by(job_posting_id: job_post.id, freelancer_id: current_freelancer.id) 
+                if (@job_match.nil?) %>
+                        <a href="/job_matches/propose_job?job_posting_id=<%= job_post.id %>" class="btn btn-success"><strong>Apply for job</strong></a>
+                <% end %>
+                <% @save_job = SaveJobBucket.find_by(job_posting_id: job_post.id, freelancer_id: current_freelancer.id) 
+                if (@save_job.nil?) %>
+                        <a href="/job_matches/save_job?job_id=<%= job_post.id %>" class="btn btn-danger"><strong>Save job</strong></a>
+                <% end %>
+        <% end %>
+        <a href="/job_posting/<%= job_post.id %>" class="btn btn-info"><strong>More info</strong></a>
+    
+  </div>
+    </div>
+        <% end %>
+
+    </div>
+    </div>
+
+    <div class="col-2"></div>
+    </div>
+
+   </div>

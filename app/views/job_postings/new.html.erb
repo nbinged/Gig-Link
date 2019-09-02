@@ -1,0 +1,138 @@
+<div class="row">
+
+  <div class="col-4">
+        <ul style="list-style-type:circle;">
+        <br>
+            <li style="color: #1F8496"><strong>Job Description &#10063</strong></li>
+            <li>Details &#10063</li>
+            <li>Expertise &#10063</li>
+            <li>Budget &#10063</li>
+  </div>
+  <div class="col-6">
+    <%= form_with scope: :job_posting, url: job_postings_create_path, local: true do |f| %>
+    <br >
+        <h2>Getting Started</h2>
+        <p>Step 1 of 5</p>
+      <div class="form-group">
+        <%= f.label :name_of_your_job_posting %>
+        <%= f.text_field :job_post_title, autofocus: false, style: "width:480px; height:40px",class: 'form-control' %>
+      </div>
+      <div class="form-group">
+        <%= f.label :job_category %><br />
+        <%= f.collection_select :job_category_id, @job_categories, :id, :name %>
+      </div>
+      <div class="form-group">
+        <%= f.label :job_description %><br />
+        <%= f.text_area :job_description, autofocus: false, class: 'form-control',size: "65x8"  %>
+      </div>
+  </div>
+</div>
+</br>
+<div class="row">
+  <div class="col-4">
+        <ul>
+            <li>Job Description &#10004;</li>
+            <li style="color: #1F8496"><strong>Details &#10063</strong></li>
+            <li>Expertise &#10063</li>
+            <li>Budget &#10063</li>
+  </div>
+  <div class="col-6">
+        <h2>Details</h2>
+        <p>Step 2 of 5</p>
+      <div class="form-group">
+        <%= f.label :what_type_of_project_do_you_have %><br />
+        <% @project_types.each do |project_type| %>
+            <%= f.radio_button :project_type_id, project_type.id %>
+            <%= f.label :project_type, project_type.name %>
+        <% end %>
+      </div>
+      <div class="form-group">
+        <%= f.label :who_can_see_your_job %><br />
+        <% @post_visibilities.each do |post_visibility| %>
+            <%= f.radio_button :post_visibility_id, post_visibility.id %>
+            <%= f.label :post_visibility, post_visibility.name %>
+        <% end %>
+      </div>
+      <div class="form-group">
+        <%= f.label :how_many_freelancers_do_you_need %><br />
+        <% @no_of_freelancers.each do |no_of_freelancer| %>
+            <%= f.radio_button :no_of_freelancer_id, no_of_freelancer.id %>
+            <%= f.label :no_of_freelancer, no_of_freelancer.name %>
+        <% end %>
+      </div>
+       <div class="form-group">
+        <%= f.label  "Project Start Date:" %>
+        <%= f.text_field :project_start_date, autofocus: false,style: "width:480px; height:40px", class: 'form-control' %>
+      </div>
+  </div>
+</div>
+</br>
+<div class="row">
+  <div class="col-4">
+        <ul style="list-style-type:circle;">
+            <li>Job Description &#10004;</li>
+            <li>Details &#10004;</li>
+            <li style="color: #1F8496"><strong>Expertise &#10063</strong></li>
+            <li>Budget &#10063</li>
+  </div>
+  <div class="col-6">
+        <h2>Experience</h2>
+        <p>Step 3 of 5</p>
+      <div class="form-group">
+        <%= f.label :How_much_experience_do_you_require_your_freelancer_to_have %><br />
+        <% @experience_level_hourly_rates.each do |experience_level| %>
+            <%= f.label :experience_level_hourly_rate_id, experience_level.name %>
+            <%= f.radio_button :experience_level_hourly_rate_id, experience_level.id %>
+        <% end %>
+      </div>
+    <div class="form-group">
+        <%= f.label :what_programming_languages_do_you_require? %><br />
+        <% @expertises.select{|x| x.name == "Programming Language"}.first.expertise_detail.each do |expertise| %>
+            <%= f.label :expertise_id, expertise.name %>
+            <%= f.radio_button :expertise_id, expertise.name %>
+        <% end %>
+      </div>
+     
+  </div>
+</div>
+</br>
+<div class="row">
+  <div class="col-4">
+        <ul style="list-style-type:circle;">
+            <li>Job Description &#10004;</li>
+            <li>Details &#10004;</li>
+            <li>Expertise &#10004;</li>
+            <li style="color: #1F8496"><strong>Budget &#10063</strong></li>
+  </div>
+  <div class="col-5">
+        <h2>Budget</h2>
+        <p>Step 4 of 5</p>
+      <div class="form-group">
+        <%= f.label :how_would_you_like_to_pay_your_freelancer %><br />
+        <% @payment_types.each do |payment_type| %>
+            <%= f.label :payment_type_id, payment_type.name %>
+            <%= f.radio_button :payment_type_id, payment_type.id %>
+        <% end %>
+      </div>
+      <div class="form-group">
+        <%= f.label  "Fixed Price ($ per project):" %>
+        <%= f.text_field :fixed_price, autofocus: false,style: "width:480px; height:40px", class: 'form-control' %>
+      </div>
+      <div class="form-group">
+        <%= f.label :how_long_do_you_expect_this_project_to_last_for %><br />
+        <% @project_timelines.each do |project_timeline| %>
+            <%= f.label :project_timeline_id, project_timeline.name %>
+            <%= f.radio_button :project_timeline_id, project_timeline.id %>
+        <% end %>
+      </div>
+<br/>
+          
+            <%= f.submit "Save Job", class: "btn btn-success", style: "height:40px; width: 160px; font-size:18px; margin-right: 10px"%>
+    					
+  </div>
+    <div class="col-2"></div>
+    </div>
+    <% end %>
+</br>
+</div>
+</br>

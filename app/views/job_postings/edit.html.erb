@@ -1,0 +1,158 @@
+<div class="row" style="padding-left: 50px;">
+    <%= form_with scope: :edit_job, url: job_path, model: @job_posting, local: true do |f| %>
+</br>
+<div class="row">
+
+  <div class="col-4">
+        <ul style="list-style-type:circle;">
+            <li><strong>Job Description</strong></li>
+            <li>Details</li>
+            <li>Expertise</li>
+            <li>Budget</li>
+  </div>
+
+  <div class="col-8">
+
+        <h2>Getting Started</h2>
+        <p>Step 1 of 5</p>
+
+      <div class="form-group">
+        <%= f.label :name_of_your_job_posting %>
+        <%= f.text_field :job_post_title, autofocus: false, class: 'form-control' %>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :job_category %><br />
+        <%= f.collection_select :job_category_id, @job_categories, :id, :name %>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :job_description %><br />
+        <%= f.text_area :job_description, autofocus: false, class: 'form-control' %>
+      </div>
+
+  </div>
+</div>
+
+</br>
+<div class="row">
+
+  <div class="col-4">
+        <ul style="list-style-type:circle;">
+            <li>Job Description</li>
+            <li><strong>Details</strong></li>
+            <li>Expertise</li>
+            <li>Budget</li>
+  </div>
+
+  <div class="col-8">
+
+        <h2>Details</h2>
+        <p>Step 2 of 5</p>
+
+      <div class="form-group">
+
+        <%= f.label :what_type_of_project_do_you_have %><br />
+
+        <% @project_types.each do |project_type| %>
+            <%= f.radio_button :project_type_id, project_type.id %>
+            <%= f.label :project_type, project_type.name %>
+        <% end %>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :who_can_see_your_job %><br />
+
+        <% @post_visibilities.each do |post_visibility| %>
+            <%= f.radio_button :post_visibility_id, post_visibility.id %>
+            <%= f.label :post_visibility, post_visibility.name %>
+        <% end %>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :how_many_freelancers_do_you_need %><br />
+
+        <% @no_of_freelancers.each do |no_of_freelancer| %>
+            <%= f.radio_button :no_of_freelancer_id, no_of_freelancer.id %>
+            <%= f.label :no_of_freelancer, no_of_freelancer.name %>
+        <% end %>
+      </div>
+
+  </div>
+
+</div>
+
+</br>
+<div class="row">
+
+  <div class="col-4">
+        <ul style="list-style-type:circle;">
+            <li>Job Description</li>
+            <li>Details</li>
+            <li><strong>Expertise</strong></li>
+            <li>Budget</li>
+  </div>
+
+  <div class="col-8">
+
+        <h2>Experience</h2>
+        <p>Step 3 of 5</p>
+        <input type="hidden" name="job[experience_level_hourly_rate_id]" value="1" />
+
+
+      <div class="form-group">
+        <%= f.label :How_much_experience_do_you_require_your_freelancer_to_have %><br />
+
+        <% @experience_level_hourly_rates.each do |experience_level| %>
+            <%= f.radio_button :experience_level_hourly_rates, experience_level.id %>
+            <%= f.label :experience_level_hourly_rates, experience_level.name %>
+        <% end %>
+      </div>
+
+  </div>
+
+</div>
+
+</br>
+<div class="row">
+
+  <div class="col-4">
+        <ul style="list-style-type:circle;">
+            <li>Job Description</li>
+            <li>Details</li>
+            <li>Expertise</li>
+            <li><strong>Budget</strong></li>
+  </div>
+
+  <div class="col-8">
+
+        <h2>Budget</h2>
+        <p>Step 4 of 5</p>
+
+      <div class="form-group">
+
+        <%= f.label :how_would_you_like_to_pay_your_freelancer %><br />
+        <% @payment_types.each do |payment_type| %>
+            <%= f.label :payment_type_id, payment_type.name %>
+            <%= f.radio_button :payment_type_id, payment_type.id %>
+        <% end %>
+      </div>
+
+      <div class="form-group">
+
+        <%= f.label :how_long_do_you_expect_this_project_to_last_for %><br />
+        <% @project_timelines.each do |project_timeline| %>
+            <%= f.label :project_timeline_id, project_timeline.name %>
+            <%= f.radio_button :project_timeline_id, project_timeline.id %>
+        <% end %>
+      </div>
+
+<br/>
+
+            <%= button_tag(type: 'submit', class: "btn btn-primary") do %>
+             <i class="icon-ok icon-white"></i> Save Job
+            <% end %>
+
+  </div>
+
+    <% end %>

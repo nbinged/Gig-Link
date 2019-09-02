@@ -1,0 +1,60 @@
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+    <!--<nav class="navbar navbar-light bg-light">
+          <a class="navbar-brand" href="/" style="color: #1F8496"><strong>Gig-Link</strong></a>
+    </nav>-->
+
+    </br>
+    <!----------- sign up model --------------->
+    <div class="modal-body" style="padding-left: 35%; padding-right: 35%">
+        <!-- modal body start -->
+        <h4>Create your account</h4>
+        <br />
+        <%= devise_error_messages! %>
+
+            <div class="form-group">
+                <%= f.label :first_name %>
+                    <br />
+                    <%= f.text_field :first_name, autofocus: false, class: 'form-control' %>
+            </div>
+
+            <div class="form-group">
+                <%= f.label :last_name %>
+                    <br />
+                    <%= f.text_field :last_name, autofocus: false, class: 'form-control' %>
+            </div>
+
+            <div class="form-group">
+                <%= f.label :email %>
+                    <br />
+                    <%= f.email_field :email, autofocus: false, class: 'form-control' %>
+            </div>
+
+            <div class="form-group">
+                <%= f.label :password %>
+                    <% if @minimum_password_length %>
+                        <em>(<%= @minimum_password_length %> characters minimum)</em>
+                        <% end %>
+                            <br />
+                            <%= f.password_field :password, autocomplete: "off", class: 'form-control' %>
+            </div>
+
+            <div class="form-group">
+                <%= f.label :password_confirmation %>
+                    <br />
+                    <%= f.password_field :password_confirmation, autocomplete: "off", class: 'form-control' %>
+            </div>
+
+            <div class="form-group">
+                <%= f.label :country %></br>
+                <%= f.country_select :country %>
+            </div>
+
+            <div class="form-group">
+                <center><%= f.submit "Sign Me Up", class: "btn btn-primary btn-lg" %><br >
+                <!--<font>Already have an account? <a href="sign_in"  aria-pressed="true">Log in</a></font>--></center>
+    
+            </div>
+
+            <% end %>
+    </div>
+

@@ -1,0 +1,55 @@
+<div class="container">
+    </br>
+<div class="row">
+        <div class="col-2"></div>
+    <div class="col-8">
+
+    <% @job_matches.each do |job_match| %>
+
+    <div class="card">
+  <h5 class="card-header"> Required role: <%= job_match.job_posting.job_category.name %> </h5>
+
+  <div class="card-body">
+    <h3 class="card-title"> <strong> <%= job_match.job_posting.job_post_title %> </strong> </h3>
+
+        <p class="card-text"> <%= job_match.job_posting.job_description %> </p>
+        <p class="card-text"> <strong>Project Timeline:</strong> <%= job_match.job_posting.project_timeline.name %> </p>
+        <p class="card-text"> <strong>Project Type:</strong> <%= job_match.job_posting.project_type.name %></p>
+        <p class="card-text"> <strong>Preferred Experience level:</strong> <%= job_match.job_posting.experience_level_hourly_rate.name %> </p>
+        <p class="card-text"> <strong>Hourly Rate($):</strong> <%= job_match.job_posting.experience_level_hourly_rate.hourly_rates %> </p>
+        <p class="card-text"> <strong>Freelancer:</strong> <%= job_match.freelancer.first_name %>&nbsp;<%= job_match.freelancer.last_name %> </p>
+        <p class="card-text"> <strong>Start Date:</strong> <%= job_match.freelancer.start_work_date %> </p>
+        <p class="card-text"> <strong>Status:</strong> 
+            <% if (job_match.approval_status == 0) %>
+                Pending Approval 
+            <% elsif (job_match.approval_status == 1)  %>
+                Approved
+            <% elsif (job_match.approval_status == 2)  %>
+                Close
+            <% else %>
+                Rejected 
+            <% end %>    </p>
+        
+  <% if hirer_signed_in? %>
+        <% if (job_match.approval_status == 0) %>
+              <a class="btn btn-lg btn-outline-primary" 
+                  href="job_matches/status_update?approval_status=1&id=<%= job_match.id%>" role="button">Approve</a>
+              <a class="btn btn-lg btn-outline-primary" 
+                  href="job_matches/status_update?approval_status=3&id=<%= job_match.id%>" role="button">Reject</a>
+        <% elsif (job_match.approval_status == 1) %>
+              <a class="btn btn-lg btn-outline-primary" 
+                href="job_matches/status_update?approval_status=2&id=<%= job_match.id%>" role="button">Close</a>
+              <% end %>
+	      <% end %>	
+      
+  </div>
+    </div>
+        <% end %>
+
+    </div>
+    </div>
+
+    <div class="col-2"></div>
+    </div>
+
+   </div>

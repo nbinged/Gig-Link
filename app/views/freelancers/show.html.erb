@@ -1,0 +1,65 @@
+
+		<div class="container" id="profile_container" >
+			<div style="margin-top: 35px;">
+			<div style="padding-left: 250px;">
+			<div style="padding-top: 100px;">
+
+<% @imgname = 'profile_sample' + @freelancer.id.to_s + '.PNG' %>
+					<div class="row">
+
+					  <div class="col-sm-4" style="padding-top: 70px">
+					  		<%= image_tag @imgname, :class => "profile_sample" %>
+					  </div>
+
+
+					  <div class="col-sm-8">
+
+								<h3>
+						  		<%= @firstname %><span> </span><%= @lastname %>
+								</h3><br/>
+
+								<p id="profile_para">
+						  		<strong>Country |</strong>
+						  		<%= @country %><br/>
+								</p>
+
+						  	<p id="profile_para">
+						  		<strong>Professional Title |</strong>
+						  		<%= @freelancer.professional_title %><br/>
+								</p>
+
+								 <p id="profile_para">
+						  		<strong>Professional Overview |</strong>
+						  		<%= @freelancer.professional_overview %><br/>
+								</p>
+
+								<p id="profile_para">
+						  		<strong>Specialisation | </strong>
+						  		<%= @category.name %>
+								</p>
+
+								<p id="profile_para">
+						  		<strong>Available date | </strong>
+						  		<%= @freelancer.start_work_date %>
+								</p>
+
+								<p id="profile_para">
+						  		<strong>Experience | </strong>
+						  		<%= @experience.name %> Level
+						  		<%= @experience.hourly_rates %><br/>
+								</p>
+
+								<p id="profile_para">
+						  		<strong>Hourly Rate | </strong>
+						  		$<%= @experience.hourly_rates %><br/>
+								</p>
+								<% if (freelancer_signed_in?) %>
+								<a href="/freelancers/register_profile" class="btn btn-primary">Edit Profile</a>
+								<% end %>
+							    </div>
+
+					</div>
+					</div>
+
+		</div>
+		</div>

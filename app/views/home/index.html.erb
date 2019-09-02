@@ -1,0 +1,36 @@
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+ <div class = 'container'>
+
+ 		<div class = "row" id="home1">
+
+				 <div class="col-2">
+				 			<%= image_tag 'logo.png', :class => "index-logo" %>
+				 </div>
+
+				 <div class="col-7">
+
+						  <h1> GIG LINK</h1>
+						  <p>In this gig economy the number of freelancers are getting higher. We want to bring them and opportunities in a single platform. Here in gig link we make things easy and free.</p>
+				</div>
+
+				<div class="col-3">
+							<% if freelancer_signed_in? %>
+								<p> Let's get started! </p>
+								<a href="/freelancers/register" class="btn btn-info btn-lg active" role="button" aria-pressed="true">Freelance</a>
+							<% end
+							   if hirer_signed_in? %>
+								<p> Let's get started! </p>
+								<a href="/job_postings/new" class="btn btn-info btn-lg active" role="button" aria-pressed="true">Post a job</a>
+							<% end %>
+				 </div>
+		</div>
+
+</div>
+
+
+
+

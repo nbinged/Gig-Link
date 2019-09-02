@@ -1,0 +1,234 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+  /*
+ .body-account {
+  background: url('/image/bg-forest.jpg') no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+   }
+  
+   .banner {
+    background: url('/image/logo.png') no-repeat center center; 
+    -webkit-background-size: cover;
+    background-size: cover;
+    width: 100.5%;
+    height:125px;
+    padding-right: 10px;
+    border-radius: 4px;
+   }*/
+
+
+/*
+   .bg-banner {
+       background-color: #fac11c;
+   }
+
+   .navbar {
+       height: 120px;
+   }
+  
+   .movie-content {
+     padding-top: 10px;
+     padding-bottom: 10px;
+   }
+  
+   .p-login {
+    opacity: 0.9;
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(50%);
+    transform: translateY(50%);
+   }
+  
+   .p-register {
+    opacity: 0.9;
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(35%);
+    transform: translateY(35%);
+    width: 420px;
+   }
+  
+   .form-group.last {
+    margin-bottom:0px;
+   }
+  
+   .btn-m-r {
+     margin-right: 5px;
+   }
+   .btn-m-l {
+    margin-left: 5px;
+  }
+  
+   .col-r-10 {
+     width: 150px;
+   }
+  
+   .nav-bar-logoname {
+    float: left;
+    height: 50px;
+    font-size: 18px;
+    line-height: 20px;
+    padding-top: 21px;
+    padding-right:10px;
+   }
+  
+   .nav-bar-form {
+    float: left;
+    height: 50px;
+    width:350px;
+    padding-top: 15px;
+   }
+  
+   .nav-bar-right {
+    float: right;
+    padding-top: 21px;
+    padding-right:10px;
+    text-align: right;
+   }
+  
+   .img-frame {
+    border: 2 solid yellow;
+   }  
+  
+   .genre-top-frame {
+     padding-right: 15px !important;
+   }
+   .genre-frame {
+     width: 160px;
+   }
+  
+   .genre-header {
+     padding-bottom:5px;
+     font-weight: bold;
+   }
+  
+   .genre-li {
+     padding-bottom: 4.9px;
+   }
+  
+   .movie-frame {
+    width: 200px;
+  }
+  
+  .topsell-top-frame {
+    padding-right: 1px !important;
+    padding-left: 1px !important;
+  }
+  .topsell-frame {
+    width: 190px;
+  }
+  
+  .topsell-li {
+    padding-bottom: 22.4px;
+    list-style: square inside url("../image/sqpurple.gif");
+  }
+  
+  .topsell-header {
+    padding-bottom:5px;
+    font-weight: bold;
+  }
+  
+  .recommAR-Frame {
+    width: 1380px;
+    padding-left:12px;
+  }
+  
+  .recomm-header {
+    color: purple;
+    font-size: 24px;
+    padding-left: 12px;
+    font-family: Constantia;
+    font-weight: bold;
+  }
+  
+  .brand {
+    color: purple;
+  }
+  
+  .text-purple {
+    color: purple;
+  }
+  
+  p.text-purple a {
+    color: purple;
+    font-weight: bold;
+  
+  }
+  
+   .tooltip-movie {
+    position: relative;
+    display: inline-block;
+    border-bottom: 0 dotted black;
+    padding-bottom: 5px;
+    padding-left: 2px !important; 
+    padding-right: 2px !important;
+  }
+  
+  .tooltip-movie .tooltiptext-movie {
+    visibility: hidden;
+    width: 140px;
+
+    color: black;
+    text-align: center;
+    border-radius: 6px;
+    padding-top:10px;
+    padding-left: 10px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    text-align: left;
+    font-size: 13px;
+    font-family: Constantia;
+    position: absolute;
+    z-index: 1;
+    top: 25%;
+    left: 92%;
+  }
+  
+  .search-btn {
+    background-color: purple;
+    color: white;
+  }
+   button.search-btn:hover {
+    color: white;
+  }
+  
+  .title-unavail {
+    color: purple;
+    font-size: 26px;
+    font-family: Constantia;
+    padding-top: 20px;
+    text-align: center;
+  }
+  
+  .tooltip-movie .tooltiptext-movie::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 100%;
+    margin-top: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent yellow transparent transparent;
+  }
+  
+  .tooltip-movie:hover .tooltiptext-movie {
+    visibility: visible;
+  }
+  */

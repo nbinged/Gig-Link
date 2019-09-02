@@ -1,0 +1,4 @@
+class HirersController < ApplicationController
+    
+end
+  

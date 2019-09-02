@@ -1,0 +1,52 @@
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">Logo | Freelancer View</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Profile <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Job Repository</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+
+<div class ="container">
+	<div class="row">
+
+		<div class="col-4">
+			<br />
+			<ul style="list-style-type:none;">
+					<li>Basic Profile &#10004;</li>
+					<li>Expertise &#10004;</li>
+					<li style="color: #1F8496"><strong>Budget &#10063</strong></li>
+			</ul>
+		</div>
+
+		<div class="col-8">
+						<br >
+						<h4>Set your hourly rate</h4>
+						<p>Step 3 of 3</p>
+						<%= form_with scope: :freelancer, url: create_budget_path, local: true do |form| %>
+
+						  <p>
+						    <%= form.label :'Hourly Rate ($/hr)' %><br>
+						    <%= form.text_field :hourly_rate, style: "width:480px; height:40px", class: 'form-control' %>
+						  </p>
+
+						  <p>
+			    			<%= form.submit "Submit Profile", class: "btn btn-success", style: "height:40px; width: 160px; font-size:18px; margin-right: 10px"%>
+    						<%= link_to 'Back', register_expertise_path %>
+                          </p>
+		</div>
+	</div>
+</div>
+
+
+<% end %>

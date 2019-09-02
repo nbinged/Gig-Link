@@ -1,0 +1,47 @@
+<div class ="container">
+
+	<div class="row">
+	  <div class="col-4">
+	  <br />
+        <ul style="list-style-type:none;">
+            <li style="color: #1F8496"><strong>Basic Profile &#10063</strong></li>
+            <li>Expertise &#10063</li>
+            <li>Budget &#10063</li>
+  		</div>
+
+		<div class="col-8">
+<br />
+			<h2>Profile</h2>
+    	<p>Step 1 of 3</p>
+
+						<%= form_with scope: :freelancer, url: create_profile_path, local: true do |form| %>
+
+						  <p>
+						    <%= form.label :'Add your professional title' %><br>
+						    <%= form.text_field :professional_title, style: "width:480px; height:40px", class: 'form-control' %>
+						  </p>
+
+						  <p>
+						    <%= form.label :'Write your professional overview'%><br>
+						     <%= form.text_area :professional_overview, size: "65x8", class: 'form-control' %>
+						  </p>
+
+						  <p>
+						    <%= form.label :'When is your available start date?'%><br>
+						     <%= form.text_field :start_work_date, class: 'form-control', style: "width:480px; height:40px"   %>
+						  </p>
+
+						  <p>
+						    <%= form.label :'Highest Education'%><br>
+						     <%= form.text_field :highest_education, class: 'form-control', style: "width:480px; height:40px"   %>
+						  </p>
+
+						  <p>
+			    				<%= form.submit "Next", class: "btn btn-success", style: "height:40px; width: 120px; font-size:18px; margin-right: 10px"%>
+						  </p>
+		</div>
+	</div>
+</div>
+
+
+<% end %>

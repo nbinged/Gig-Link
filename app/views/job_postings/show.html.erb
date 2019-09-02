@@ -1,0 +1,53 @@
+
+</br>
+<div class="container">
+<div class="row">
+
+    <div class="col-10">
+    <div class="card">
+          <h4 class="card-header"> <%= @job_posting.job_category.name %> </h4>
+  <div class="card-body">
+        
+
+        <h4 class="card-title">
+                      <%= @job_posting.job_post_title %> 
+                  </h4>
+    
+    
+    <p class="card-text">
+      <%= @job_posting.job_description %>
+    </p>
+    <br/>
+    <div>
+    <table width="100%">
+      <tr width="100%">
+        <td width="30%"><strong>Project Time Line</strong></td>
+        <td width="30%"><strong>Project Type</strong></td>
+        <td width="30%"><strong>Project Start Date</strong></td>
+      </tr>
+      <tr>
+        <td width="30%"><%= @job_posting.project_timeline.name %></td>
+        <td width="30%"><%= @job_posting.project_type.name %></td>
+        <td width="30%"><%= @job_posting.project_start_date %></td>
+      </tr>
+      <tr>
+        <td colspans="3"><br ></td>
+      </tr>
+      <tr>
+        <td width="30%"><strong>Preferred Experience</strong></td>
+        <td width="30%"><strong>Payment type</strong></td>
+        <td width="30%"><strong>Hourly Rate</strong></td>
+      </tr>
+      <tr>
+        <td width="30%"><%= @job_posting.experience_level_hourly_rate.name %>&nbsp;Level</strong></td>
+        <td width="30%"><%= @job_posting.payment_type.name %></strong></td>
+        <td width="30%">$<%= @job_posting.experience_level_hourly_rate.hourly_rates %></strong></td>
+      </tr>
+    </table>
+   </div>
+    </div>
+</div>
+    </div>
+</div>
+    </div>
+</div>

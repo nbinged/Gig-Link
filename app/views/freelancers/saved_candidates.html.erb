@@ -1,0 +1,34 @@
+
+<div class="container">
+</br>
+   <% @freelancers.each do |freelancer| %>
+
+			<div class="card">
+
+			 <h5 class="card-header">
+
+					<%= freelancer.first_name %><span> </span><%= freelancer.last_name %>
+
+			 </h5>
+
+			  <div class="card-body">
+			    <h5 class="card-title"> <%= freelancer.job_category.name %> </h5>
+			    <p class="card-text"><%= freelancer.start_work_date %></p>
+			    <p class="card-text"><%= freelancer.professional_title %></p>
+
+			    <p class="card-text"><%= freelancer.hourly_rate %></p>
+
+			    <a href="/freelancer/<%= freelancer.id %>" class="btn btn-primary">View full profile</a>
+
+        <% if (hirer_signed_in?) %>
+                <% @save_job = SaveFreelancerBucket.find_by(hirer_id: current_hirer.id, freelancer_id: freelancer.id) 
+               
+			    if (@save_job.nil?) %>
+                        <a href="job_matches/save_job?freelancer_id=<%= freelancer.id %>" class="btn btn-danger"><strong>Save Candidate</strong></a>
+                <% end %>
+        <% end %>
+			  
+			  </div>
+			</div>
+    <% end %>
+</div>
