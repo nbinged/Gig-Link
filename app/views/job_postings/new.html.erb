@@ -85,14 +85,14 @@
             <%= f.radio_button :experience_level_hourly_rate_id, experience_level.id %>
         <% end %>
       </div>
-    <div class="form-group">
+<!--     <div class="form-group">
         <%= f.label :what_programming_languages_do_you_require? %><br />
         <% @expertises.select{|x| x.name == "Programming Language"}.first.expertise_detail.each do |expertise| %>
             <%= f.label :expertise_id, expertise.name %>
             <%= f.radio_button :expertise_id, expertise.name %>
         <% end %>
-      </div>
-     
+      </div> -->
+
   </div>
 </div>
 </br>
@@ -126,9 +126,9 @@
         <% end %>
       </div>
 <br/>
-          
+
             <%= f.submit "Save Job", class: "btn btn-success", style: "height:40px; width: 160px; font-size:18px; margin-right: 10px"%>
-    					
+
   </div>
     <div class="col-2"></div>
     </div>

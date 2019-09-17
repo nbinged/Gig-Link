@@ -1,14 +1,29 @@
 body {
     background-color: #F4F4F2;
+    overflow-x: hidden;
+    min-height:100%;
 }
 
+#vertical {
+vertical-align: baseline;
+margin-top: 70px;
+}
+
+
 #home1 {
-	margin-top: 300px;
+      margin-top: 155px;
+      text-align: center;
 }
 
 .index-logo {
 	height: 200px;
 }
+
+.homepage-vector {
+    max-width: 100%;
+    max-height: 100%;
+}
+
 
 #profile_para {
 	margin-bottom: 20px;
@@ -19,7 +34,6 @@ body {
     height: 370px;
     width: 280px;
 }
-
 
 
 .card-title {
@@ -51,10 +65,6 @@ ul {
     padding: 0;
     margin: 0;
     text-align: right;
-}
-
-body {
-  overflow-x: hidden;
 }
 
 .hidden-thing {

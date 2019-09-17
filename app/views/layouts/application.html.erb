@@ -25,13 +25,13 @@
         <a class="nav-link" href="/job_postings">My Posts&nbsp;&nbsp;&nbsp;|</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="/freelancers">Freelancers&nbsp;&nbsp;&nbsp;|</a>
+        <a class="nav-link" href="/freelancers">View Freelancers&nbsp;&nbsp;&nbsp;|</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="/freelancers/saved_candidates">Saved Candidate&nbsp;&nbsp;&nbsp;|</a>
+        <a class="nav-link" href="/freelancers/saved_candidates">Saved Candidates&nbsp;&nbsp;&nbsp;|</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="/job_matches">Make Contracts&nbsp;&nbsp;&nbsp;|</a>
+        <a class="nav-link" href="/job_matches">Make a Contract&nbsp;&nbsp;&nbsp;|</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="/job_postings/new">Post a Job</a>
@@ -76,11 +76,11 @@
           </a>
           </div>
 	<% else %>
-          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myLoginModal">
+          <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#myLoginModal">
             Log In
           </button>
           <div style="padding-left: 10px;">
-          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#mySignupModal">
+          <button type="button" class="btn btn-info" data-toggle="modal" data-target="#mySignupModal">
           Sign Up
           </button>
           </div>
@@ -89,18 +89,15 @@
     </div>
 </nav>
 
-
-
-
     <!-- The Login Modal -->
 		<div class="modal fade" id="myLoginModal">
 			<div class="modal-dialog modal-dialog-centered">
 			<div class="modal-content">
-				
+
 				<!-- Modal Header -->
 				<div class="modal-header">
 				<h3 class="modal-title">Get to work<br/> <font size="5px">login as ... </font></h3>
-				
+
 				<button type="button" class="close" data-dismiss="modal">&times;</button>
 				</div>
 
@@ -108,10 +105,10 @@
 				<center>
 				<div class="modal-body">
 					<br />
-					<a class="btn btn-lg btn-outline-primary" style="width: 150px; padding-top:20px; padding-bottom:20px; margin-right: 5px" href="hirers/sign_in" role="button">
+					<a class="btn btn-lg btn-success" style="width: 150px; padding-top:20px; padding-bottom:20px; margin-right: 5px" href="hirers/sign_in" role="button">
 					Hirer
 					</a>
-					<a class="btn btn-lg btn-outline-primary" style="width: 150px; padding-top:20px; padding-bottom:20px"  href="freelancers/sign_in" role="button">
+					<a class="btn btn-lg btn-primary" style="width: 150px; padding-top:20px; padding-bottom:20px"  href="freelancers/sign_in" role="button">
 					Freelancer
 					</a>
 					<br /><br /><br /><br />
@@ -125,11 +122,11 @@
 		<div class="modal fade" id="mySignupModal">
 			<div class="modal-dialog modal-dialog-centered">
 			<div class="modal-content">
-				
+
 				<!-- Modal Header -->
 				<div class="modal-header">
 				<h3 class="modal-title">Complete account setup <br/> <font size="5px">register as ...</font></h3>
-				
+
 				<button type="button" class="close" data-dismiss="modal">&times;</button>
 				</div>
 
@@ -137,10 +134,10 @@
 				<center>
 				<div class="modal-body">
 					<br />
-					<a class="btn btn-lg btn-outline-primary" style="width: 150px; padding-top:20px; padding-bottom:20px; margin-right: 5px" href="hirers/sign_up" role="button">
+					<a class="btn btn-lg btn-success" style="width: 150px; padding-top:20px; padding-bottom:20px; margin-right: 5px" href="hirers/sign_up" role="button">
 					Hirer
 					</a>
-					<a class="btn btn-lg btn-outline-primary" style="width: 150px; padding-top:20px; padding-bottom:20px"  href="freelancers/sign_up" role="button">
+					<a class="btn btn-lg btn-primary" style="width: 150px; padding-top:20px; padding-bottom:20px"  href="freelancers/sign_up" role="button">
 					Freelancer
 					</a>
 					<br /><br /><br /><br />
