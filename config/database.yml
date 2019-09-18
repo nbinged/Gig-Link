@@ -25,7 +25,7 @@ development:
   <<: *default
   database: jobalign_development
   host : localhost
-  user: postgres
+  user: giglink
   password: passfoot
 
   # The specified database role being used to connect to postgres.
@@ -62,7 +62,7 @@ test:
   <<: *default
   database: jobalign_test
   host : localhost
-  user: postgres
+  user: giglink
   password: passfoot
 
 # As with config/secrets.yml, you never want to store sensitive information,
