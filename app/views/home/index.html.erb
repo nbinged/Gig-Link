@@ -10,14 +10,15 @@
 
  		<div class = "row" id="home1">
 
-                <% if !user_signed_in? %>
                 <% if !hirer_signed_in? %>
                 <% if !freelancer_signed_in? %>
     				 <div class="col-7">
-    				 	  <%= image_tag 'teamwork.png', :class => "homepage-vector" %>
+
+    				 	  <%= image_tag ('teamwork.png', :class => "homepage-vector") %>
     				 </div>
 
     				 <div class="col-5" id="vertical">
+
                           <%= image_tag 'logo.png', :class => "index-logo" %>
                      <br/>
 
@@ -27,7 +28,6 @@
                         <button type="button" class="btn btn-info btn-lg btn-block btn-block" data-toggle="modal" data-target="#mySignupModal"> <strong>Sign Up</strong></button>
 
     				</div>
-                <% end %>
                 <% end %>
                 <% end %>
 
