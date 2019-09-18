@@ -33,17 +33,18 @@
 
                 <% if freelancer_signed_in? %>
                      <div class="col-7">
-                          <%= image_tag '17080214_recruitment.png', :class => "homepage-vector" %>
+                          <%= image_tag 'freelancerhomepage.png', :class => "homepage-vector" %>
                      </div>
 
                      <div class="col-5">
                           <%= image_tag 'logo.png', :class => "index-logo" %>
                      <br/>
 
-                          <h4 >Let's get started!</h4>
+                          <h3>Welcome to the <span style="color: rgb(40, 162, 183)">Freelancer's</span> portal</h3>
+                          <h4>Have you created your profile yet?</h4>
 
                      <br/>
-                        <a href="/freelancers/register" class="btn btn-info btn-lg active" role="button" aria-pressed="true">Freelance</a>
+                        <a href="/freelancers/register" class="btn btn-info btn-lg active" role="button" aria-pressed="true"><strong>CREATE A PROFILE</strong></a>
 
                     </div>
                 <% end %>
