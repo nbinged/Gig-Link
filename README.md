@@ -9,7 +9,12 @@
 ## Objective:
 With the advent of technology, there has been a rise in gig economy. There are more people who are working as freelancers and more project managers looking into hiring freelancers for short-term projects. However this can be costly especially if it involves a hiring agent. Hence Gig-Link aims to bring freelancers and professionals who are looking for them into a single platform, and connect them seamlessly.
 
-## Functions of the app:
+## Functions:
+Users can sign up as a 'Hirer' or 'Freelancer'. Both roles have their respective dashboards in which they will be given different features.
+
+Hirers, they can create job postings and look for freelancers based on their respective project and budget requirements.
+
+Freelancers can create a profile and view and save jobs and apply to work the various hirers's projects.
 
 ## Approach Taken:
 First we came up with a few problem statements, derive the needs and the wants for each idea. Which was 
