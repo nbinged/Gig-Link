@@ -1,3 +1,7 @@
+# Gig-Link
+
+<img src="public/screenshot.png">
+
 1. Explanations of the technologies used
 
 2. A couple paragraphs about the general approach you took
