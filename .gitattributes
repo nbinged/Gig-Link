@@ -81,3 +81,6 @@
 #
 # $ git config --global merge.ours.driver true
 schema.rb merge=ours diff=ruby
+
+public/* linguist-vendored
+app/assets/images/* linguist-vendored
