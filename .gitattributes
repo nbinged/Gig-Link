@@ -415,5 +415,5 @@ Procfile          text
 *.pyc             binary
 
 * linguist-vendored
-/app/assets/images/background_files/frameworks-2e9090135c22aad5f56c2f72dcba7880.css linguist-vendored
-/app/assets/stylesheets/test.css linguist-vendored
+app/assets/images/background_files/frameworks-2e9090135c22aad5f56c2f72dcba7880.css linguist-vendored
+app/assets/stylesheets/test.css linguist-vendored
