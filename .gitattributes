@@ -414,5 +414,5 @@ Procfile          text
 *.exe             binary
 *.pyc             binary
 
-app/assets/images/background_files/* linguist-vendored
-app/assets/stylesheets/* linguist-vendored
+app/assets/images/background_files/* linguist-vendored=true
+app/assets/stylesheets/* linguist-vendored=true
